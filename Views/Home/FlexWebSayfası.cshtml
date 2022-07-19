@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "FlexWebSayfası";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .Header
+        {
+            background-color:aqua;
+            padding:60px;
+            color:white;
+        }
+        .navbar
+        {
+            background-color:grey;
+            display:flex;
+        }
+        .navbar a 
+        {
+            padding:10px 15px;
+            color:white;
+            text-decoration:none;
+            text-align:center;
+        }
+        .navbar a:hover
+        {
+            background-color:white;
+            color:black;
+        }
+        .row
+        {
+            display:flex;
+        }
+        .side
+        {
+            flex:30%;
+            padding:20px;
+            background-color:lightslategrey;
+        }
+        .main
+        {
+            flex:70%;
+            padding:20px;
+            margin-left:20px;
+            background-color:dimgray;
+        }
+        .Fakeimg
+        {
+            background-color:grey;
+            padding:20px;
+            
+        }
+        .footer
+        {
+            text-align:center;
+            background-color:darkseagreen;
+            color:white;
+            padding:40px;
+        }
+        @@media screen and (max-width:700px) 
+        {
+         .row, .navbar
+         {
+                flex-direction:column
+         }       
+        }
+    </style>
+</head>
+<body>
+    @* Header Başlangıç *@
+    <div style="background-color:yellow; padding:5px;">
+        <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+    </div>
+    <div class="Header">
+        <h1 style="text-align:center;">My Website</h1>
+        <p style="text-align:center;">With a <b>Flexible</b> layout.</p>
+    </div>
+    @* Header Bitiş *@
+
+    @* Navbar Başlangıç *@
+    <div class="navbar">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+    @* Navbar Bitiş *@
+
+    @* Main Panel Başlangıç *@
+    <div class="row">
+        <div class="side">
+            <h2>About Me</h2>
+            <h5>Photo Of Me</h5>
+            <div style="height:200px;" class="Fakeimg">image</div>
+            <p>Some Text about me in culpa qui officia deserunt mollit anim..</p>
+            <h3>More Text</h3>
+            <p>Lorem Ipsum Dolor Sit Ame.</p>
+            <div class="Fakeimg" style="height:50px;">image</div>
+            <div class="Fakeimg" style="height:50px;">image</div>
+            <div class="Fakeimg" style="height:50px;">image</div>
+        </div>
+        <div class="main">
+            <div class="card">
+                <h1>TITLE HEADING</h1>
+                <h5>Title Description, July 20, 2022</h5>
+                <div class="Fakeimg" style="height:200px;">image</div>
+                <h5>Some Text</h5>
+                <h5>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</h5>
+            </div>
+            <div class="card">
+                <h1>TITLE HEADING</h1>
+                <h5>Title Description, July 20, 2022</h5>
+                <div class="Fakeimg" style="height:200px;">image</div>
+                <h5>Some Text</h5>
+                <h5>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</h5>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+    @* Main Panel Bitiş *@
+
+    @* Footer Başlangıç *@
+    <div class="footer">
+        FOOTER  @DateTime.Now.Year
+    </div>
+    @* Footer Bitiş *@
+</body>
+</html>
